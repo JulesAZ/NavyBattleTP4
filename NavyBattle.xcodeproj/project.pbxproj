@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BAA7207E1E3A8691007EC360 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA7207D1E3A8691007EC360 /* main.swift */; };
+		D77C3F4A2024471C00B4B326 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C3F492024471C00B4B326 /* Ship.swift */; };
+		D77C3F4C2024488800B4B326 /* Gameboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C3F4B2024488800B4B326 /* Gameboard.swift */; };
+		D77C3F4E20244B0000B4B326 /* CasePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C3F4D20244B0000B4B326 /* CasePosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		BAA7207A1E3A8691007EC360 /* NavyBattle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NavyBattle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA7207D1E3A8691007EC360 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D77C3F492024471C00B4B326 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		D77C3F4B2024488800B4B326 /* Gameboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameboard.swift; sourceTree = "<group>"; };
+		D77C3F4D20244B0000B4B326 /* CasePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasePosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				BAA7207D1E3A8691007EC360 /* main.swift */,
+				D77C3F492024471C00B4B326 /* Ship.swift */,
+				D77C3F4B2024488800B4B326 /* Gameboard.swift */,
+				D77C3F4D20244B0000B4B326 /* CasePosition.swift */,
 			);
 			path = NavyBattle;
 			sourceTree = "<group>";
@@ -122,6 +131,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA7207E1E3A8691007EC360 /* main.swift in Sources */,
+				D77C3F4A2024471C00B4B326 /* Ship.swift in Sources */,
+				D77C3F4E20244B0000B4B326 /* CasePosition.swift in Sources */,
+				D77C3F4C2024488800B4B326 /* Gameboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +265,7 @@
 				BAA720831E3A8691007EC360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
