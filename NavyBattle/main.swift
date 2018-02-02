@@ -13,20 +13,20 @@ import Foundation
 typealias NextCasePositionToPlay = (_: CasePosition?) -> CasePosition
 
 
+var gameBoard = [CasePosition : Gameboard.CaseState]()
 
 
-
-func main(_ nextCasePositionToPlay: gameboard.NextCasePositionToPlay) {
-    var gameBoard = [CasePosition : Gameboard.CaseState]()
+func main(_ nextCasePositionToPlay: gameBoard.NextCasePositionToPlay) {
+    
     let ships = gameBoard.positionShips()
     var lastCasePositionPlayed: CasePosition?
     repeat {
         var playingAt = "Playing at "
-        let caseToPlay = nextCasePositionToPlay(lastCasePositionPlayed)
+        let caseToPlay = gameBoard.nextCasePositionToPlay(lastCasePositionPlayed)
         playingAt += "\(caseToPlay.description)... "
-        if let ship = isAShipAtThisPosition(caseToPlay, ships: ships) {
+        if let ship = gameBoard.isAShipAtThisPosition(caseToPlay, ships: ships) {
             gameBoard[caseToPlay] = .red
-            if isShipEntirelyStriked(ship, gameBoard: gameBoard) {
+            if isShipEntirelyStriked(ship, gameBoard: Gameboard) {
                 playingAt += "\(ship.description) coulé"
             } else {
                 playingAt += "\(ship.description) touché"
@@ -38,7 +38,7 @@ func main(_ nextCasePositionToPlay: gameboard.NextCasePositionToPlay) {
         lastCasePositionPlayed = caseToPlay
         print(playingAt)
         gameBoard.displayBoard(gameBoard: gameBoard)
-    } while allShipsStricked(ships: ships, gameBoard: gameBoard) == false
+    } while gameBoard.allShipsStriked(ships: ships) == false
 }
 
 main(nextPositionToPlayWillBeAtRight(previousOne:))
